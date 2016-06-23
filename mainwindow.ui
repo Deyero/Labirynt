@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Labirynt</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="Labirynth" name="labirynth" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPlik">
+    <property name="title">
+     <string>Plik</string>
+    </property>
+    <addaction name="actionOtw_rz"/>
+    <addaction name="actionZapisz"/>
+   </widget>
+   <widget class="QMenu" name="menuLosuj">
+    <property name="title">
+     <string>Losowa</string>
+    </property>
+    <addaction name="actionLosowa_mapa"/>
+   </widget>
+   <widget class="QMenu" name="menuWidok">
+    <property name="title">
+     <string>Widok</string>
+    </property>
+    <addaction name="actionPoka_siatke"/>
+   </widget>
+   <widget class="QMenu" name="menuOpcje">
+    <property name="title">
+     <string>Opcje</string>
+    </property>
+    <addaction name="actionZezwalaj_na_uko_ne_cie_ki"/>
+    <addaction name="actionZezwalaj_na_ruch_prostopad_y"/>
+    <addaction name="actionKonik"/>
+   </widget>
+   <widget class="QMenu" name="menu_cie_ki">
+    <property name="title">
+     <string>Ścieżki</string>
+    </property>
+    <addaction name="actionPoka_wszystkie"/>
+    <addaction name="actionNastepna"/>
+   </widget>
+   <addaction name="menuPlik"/>
+   <addaction name="menuLosuj"/>
+   <addaction name="menuWidok"/>
+   <addaction name="menuOpcje"/>
+   <addaction name="menu_cie_ki"/>
+  </widget>
+  <action name="actionOtw_rz">
+   <property name="text">
+    <string>Otwórz</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionLosowa_mapa">
+   <property name="text">
+    <string>Losowa mapa...</string>
+   </property>
+   <property name="shortcut">
+    <string>L</string>
+   </property>
+  </action>
+  <action name="actionPoka_siatke">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Pokaż siatke</string>
+   </property>
+  </action>
+  <action name="actionZapisz">
+   <property name="text">
+    <string>Zapisz</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionZezwalaj_na_uko_ne_cie_ki">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Zezwalaj na ruch ukośny</string>
+   </property>
+  </action>
+  <action name="actionZezwalaj_na_ruch_prostopad_y">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Zezwalaj na ruch prostopadły</string>
+   </property>
+  </action>
+  <action name="actionKonik">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Konik :)</string>
+   </property>
+  </action>
+  <action name="actionPoka_wszystkie">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Pokaż wszystkie</string>
+   </property>
+  </action>
+  <action name="actionNastepna">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Nastepna</string>
+   </property>
+   <property name="shortcut">
+    <string>N</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Labirynth</class>
+   <extends>QWidget</extends>
+   <header>labirynth.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
